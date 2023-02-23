@@ -69,3 +69,23 @@ eqfun <- function(x) 2*x[1]+x[2] - 5
 Rsolnp::solnp(pars = c(2, 1), fun = fn, eqfun = eqfun, eqB=0)
 
 ```
+
+## Economic application
+
+### Maximize the utility of a consumer
+
+$$
+\begin{aligned}
+&\text{Max.} && f(x_1,x_2)=x_1^{0.5}x_2^{0.5} \\
+&\text{subject to} && 4x_1+3x_2 =\, 100\\
+& && x_1,x_2 \in \mathbb{R}
+\end{aligned}
+$$
+--
+
+## `NlcOptim::solnl()`
+
+```{r}
+objective <- function(x) -x[1]^0.5*x[2]^0.5
+NlcOptim::solnl(c(1,1),objective,Aeq=matrix(c(4,3),nrow = 1), Beq=100)
+```
