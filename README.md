@@ -130,3 +130,27 @@ $x_2$ = number of German guests accommodated at the hotel every season.
 - Objective function
 
 $$ f(x_1, x_2) = 40x_1 + 30x_2=(40\quad 30)\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
+
+- Constraints
+
+$$
+\begin{aligned}
+x_1+x_2&\leq 100\\
+400x_1+150x_2&\leq 30000\\
+x_1,x_2&\geq 0
+\end{aligned}
+$$
+
+$$\begin{bmatrix}
+1&1\\
+400&150
+\end{bmatrix}
+\begin{pmatrix}
+x_1\\
+x_2
+\end{pmatrix}\leq 
+\begin{pmatrix}
+100\\
+30000
+\end{pmatrix}
+$$
