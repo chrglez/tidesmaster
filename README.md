@@ -129,4 +129,4 @@ $x_2$ = number of German guests accommodated at the hotel every season.
 
 - Objective function
 
-$$ f(x_1, x_2) = 40x_1 + 30x_2=(40\quad 30)\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
+$$ f(x_1, x_2) = 40x_1 + 30x_2=(40\quad 30)\begin{pmatrix}x_1\x_2\end{pmatrix}$$
