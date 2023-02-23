@@ -89,3 +89,44 @@ $$
 objective <- function(x) -x[1]^0.5*x[2]^0.5
 NlcOptim::solnl(c(1,1),objective,Aeq=matrix(c(4,3),nrow = 1), Beq=100)
 ```
+# Linear Programming
+
+- Linear programming is a method used to optimize a linear objective function subject to linear equality and inequality constraints
+- Linear programming is widely used in economics and operations research to model and optimize complex systems
+
+### Utility in Economics
+
+- Linear programming can be used to model and optimize supply chain management, production planning, and financial planning
+- For example, a company may use linear programming to minimize production costs subject to production capacity and demand constraints
+
+### Utility in Tourism
+
+- In tourism, linear programming can be used to optimize tour itineraries, hotel bookings, and transportation logistics
+- For example, a tour company may use linear programming to optimize a tour itinerary to maximize the number of tourist attractions visited subject to time and budget constraints
+
+## Mathematical specification
+
+$$
+\begin{aligned}
+&\text{optimize} && c^tx \\
+&\text{subject to} && Ax \leq b\\
+& && x \geq 0
+\end{aligned}
+$$
+
+where $x=(x_1,\ldots,x_n)$ is the vector of decision variables, $c=(c_1,\ldots,c_n)$ is the vector of coefficients in the objective function an $A$ is the matrix of coefficients in the m constraints.
+
+## Example
+
+Consider that the capacity of Gran Canaria Hotel is 100 guests and receives requests for accommodation from Britain and Germany. The profit per guest obtained by the hotel is 40 and 30 monetary units (mu.), for British and German visitor respectively. Moreover, the accommodation of any guest requires a resource. Each season the available amount of this resource is 30000 units,and the requirement per season of each guest is 600 and 150 units of resource per British and German guest respectively. The hotel receives a high number of requests and desires to determine how many requests of each nationality must accept to maximize the profit.
+
+
+- Decision variables
+
+$x_1$ = number of British guests accommodated at the hotel every season
+
+$x_2$ = number of German guests accommodated at the hotel every season.
+
+- Objective function
+
+$$ f(x_1, x_2) = 40x_1 + 30x_2=(40\quad 30)\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
