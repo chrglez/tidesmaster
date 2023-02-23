@@ -57,3 +57,15 @@ $$
 & && x_1,x_2 \in \mathbb{R}
 \end{aligned}
 $$
+
+```{r}
+# Define the function to be optimized
+fn <- function(x) (x[1] - 2)^2 + (x[2] - 3)^2
+
+# Define the equality constraint
+eqfun <- function(x) 2*x[1]+x[2] - 5
+
+# Find the optimal values subject to the constraint
+Rsolnp::solnp(pars = c(2, 1), fun = fn, eqfun = eqfun, eqB=0)
+
+```
