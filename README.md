@@ -203,3 +203,27 @@ optimum$solution
 optimum$objval
 ```
 
+### Transportation Problem
+
+A factory has two plants located in cities A and B. The factory supplies a product to three stores located in cities C, D y E. Plants A and B can deliver 8 and 9 units per week, respectively. The stores require 4, 5 y 8 units per week to satisfy the demand. The transportation cost per unit of product are shown in the following table
+
+|   C D E |
+|---------|
+| A 5 3 4 |
+| B 6 7 2 |
+
+To formulate the problem we define the variables $x_{ij}$ as the amount of product transported from supply point i to demanpoint $j$, where $i = 1, 2$, and $j = 1, 2, 3$ (we use 1, 2 instead of A, B, for supply points, and 1,2,3 instead of C,D,E, for demand points).
+
+
+```{r}
+costs <- matrix(c(5,3,4,6,7,2), byrow = TRUE, nrow = 2)
+cap.signs <- rep ("<=", 2)
+cap.rhs <- c(8, 9)
+dem.signs <- rep (">=", 3)
+dem.rhs <- c(4,5,8)
+lptransport <- lp.transport (costs, "min", cap.signs, cap.rhs, dem.signs, dem.rhs)
+lptransport$solution
+
+```
+
+![Thas all folks]("https://media.giphy.com/media/mR3dXKpI6P8CA/giphy.gif")
