@@ -154,3 +154,52 @@ x_2
 30000
 \end{pmatrix}
 $$
+
+## Problem formulation
+
+$$
+\begin{aligned}
+&\max_{x_1,x_2} && 40x_1 + 30x_2 \\
+&\text{s.t.} 
+&&x_1+x_2\leq 100\\
+&&&400x_1+150x_2\leq 30000\\
+& && x \geq 0
+\end{aligned}
+$$
+
+## `lpSolve::lp()`
+
+```{r}
+# Loading the package
+library(lpSolve)
+
+# Coefficients of objective functions
+objective.in <- c(40, 30)
+
+# Matrix of coefficients of constraints
+const.mat <- matrix(c(1, 1, 400, 150), nrow=2, byrow=TRUE)
+
+# Right hand side of inequities
+const.rhs <- c(100, 30000)
+
+# Direction of inequities
+const.dir <- c("<=", "<=")
+
+optimum <- lp(direction="max", objective.in, const.mat,
+const.dir, const.rhs)
+
+```
+---
+
+- **Optimal values** of $x_1$ and $x_2$
+```{r}
+optimum$solution
+
+```
+
+- **Objective** at minimum
+
+```{r}
+optimum$objval
+```
+
