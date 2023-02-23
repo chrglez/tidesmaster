@@ -16,3 +16,31 @@ $$
 & && x_j \in \mathcal{X}_j, \quad j = 1, \ldots, n
 \end{aligned}
 $$
+## Constrained Optimization
+
+-Sometimes, the optimization problem has constraints that the solution must satisfy
+
+-A constrained optimization problem involves minimizing or maximizing a function subject to constraints
+
+- Constraints can be expressed as equations or inequalities that the solution must satisfy
+
+### Example: Constrained Optimization in Tourism
+
+- A tour company wants to plan a route for a bus that visits a set of tourist attractions
+
+- The company wants to minimize the distance traveled by the bus subject to the constraint that each attraction must be visited exactly once
+
+- This is an example of a constrained optimization problem, where the objective is to minimize distance traveled subject to the constraint of visiting each attraction once.
+---
+
+## Optimization with Equality Constraint
+
+Sometimes we need to optimize a function subject to the constraint that one or more of the parameters must satisfy an equality constraint.
+
+$$
+\begin{aligned}
+&\text{Max.} && f(x) \\
+&\text{subject to} && c_i(x) =\, 0, \quad i = 1, \ldots, m \\
+& && x_j \in \mathcal{X}_j, \quad j = 1, \ldots, n
+\end{aligned}
+$$
