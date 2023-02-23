@@ -44,3 +44,16 @@ $$
 & && x_j \in \mathcal{X}_j, \quad j = 1, \ldots, n
 \end{aligned}
 $$
+
+
+## `Rsolnp::solnp()`
+
+### Example:
+
+$$
+\begin{aligned}
+&\text{Opt.} && f(x_1,x_2)=(x_1-2)^2+(x_2-3)^2 \\
+&\text{subject to} && x_1+2x_2 =\, 5\\
+& && x_1,x_2 \in \mathbb{R}
+\end{aligned}
+$$
