@@ -81,7 +81,7 @@ $$
 & && x_1,x_2 \in \mathbb{R}
 \end{aligned}
 $$
---
+
 
 ## `NlcOptim::solnl()`
 
